@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My first Vue page</title>
+    <style>
+        #app {
+             margin: 10px;
+             padding: 10px;
+             border: solid black 1px;
+             display: inline-block;
+             background-color: lightpink;
+        }
+
+        /* .pinkBG {
+          background-color: lightpink;
+        } */
+      </style>
+</head>
+<body>
+    <div id="app">
+        <!-- v-bind example -->
+        <div v-bind:class="vueClass">Hello World this is the v-bind example</div>
+         
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+
+        const app = Vue.createApp({
+          data() {
+            return {
+                // message: "Hello World!"
+                vueClass: "pinkBG"
+            }
+          }
+        })
+      
+       app.mount('#app')
+      
+      </script>
+
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+</body>
+</html>
